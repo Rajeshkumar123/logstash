@@ -30,8 +30,8 @@ ADD Gemfile.jruby-1.9.lock.release /opt/logstash/Gemfile.jruby-1.9.lock.release
 USER root
 RUN rm -rf build && \
     mkdir -p build && \
-    chown -R logstash:logstash /opt/logstash
-USER logstash
+    chown -R root:root /opt/logstash
+USER root
 WORKDIR /opt/logstash
 
 LABEL retention="prune"
